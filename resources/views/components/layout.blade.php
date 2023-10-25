@@ -150,7 +150,7 @@
     </button>
 </article>
 
-<section>
+{{-- <section>
     <div class="mr-0 ml-0 mt-6 flex justify-around mt-5">
         <div class="font-bold"><a class="text-blue-900 border rounded px-3 py-1">Food</a></div>
         <div class="font-bold"><a class="text-blue-900 border rounded px-3 py-1">Health</a></div>
@@ -159,7 +159,7 @@
         <div class="font-bold"><a class="text-blue-900 border rounded px-3 py-1">Work Life</a></div>
         <div class="font-bold"><a class="text-blue-900 border rounded px-3 py-1">Business</a></div>
     </div>
-</section>
+</section> --}}
 
 
 <section class="m-6 b-section mt-8 flex justify-around flex-wrap b-section">
@@ -217,16 +217,55 @@
 </section>
 
 
-<section class="bg-gradient-to-r from-purple-500 to-pink-500 flex">
-    <div class="w-1/4">
-        <img class="w-full h-46 ml-8" src="{{ asset('images/blog.jpg')}}" />
+<section class="bg-gradient-to-r h-5/6 from-purple-500 to-pink-500 flex flex-column mt-14">
+    <div class="w-3/4  text-center mt-12">
+        <h1 class="text-2xl md:text-4xl text-white uppercase">Upcoming blogs for Special Month</h1>
+        <div class="mt-8 mb-5 md:mb-1">
+            <button class="bg-transparent hover:bg-grey text-grey-dark font-semibold hover:text-white py-2 px-4 border border-grey hover:border-transparent rounded mr-2">
+                Authors
+            </button>
+            <button class="bg-transparent hover:bg-grey text-grey-dark font-semibold hover:text-white py-2 px-4 border border-grey hover:border-transparent rounded mr-2">
+                Posts
+            </button>
+            <button class="bg-transparent hover:bg-grey text-grey-dark font-semibold hover:text-white py-2 px-4 border border-grey hover:border-transparent rounded mr-2">
+                Feedbacks
+            </button>
+        </div>
     </div>
-    <div class="d-flex w-3/4 ml-10 flex justify-center align-center mt-9 uppercase">
-        <h1 class="text-3xl" style="color:beige;">What we provide for this website</h1>
+    <div class="flex w-1/4 ml-10 h-46 justify-end items-center pb-6 hidden md:block">
+        <img src="{{ asset('images/ball-1906468_1280.png') }}" />
     </div>
 </section>
 
-    {{ $slot }}
+<section>
+    <h1 class="text-4xl text-center mt-14 text-blue-900">Every month, we create blog in related fields</h1>
+</section>
+
+
+<section class="flex flex-col md:flex-row justify-between mt-12 w-4/5 m-auto">
+     <div class="w-full md:w-2/5 shadow-md">
+           <img src="{{ asset('images/3d-cartoon-background-children.jpg') }}" />
+     </div>
+     <div class="w-full md:w-3/5 p-3 flex justify-center items-center flex-col">
+           <h1 class="text-2xl text-blue-600 font-bold p-3">Struggling For A Blog Post Headline? 50+ Viral Headline Examples</h1>
+           <p class="p-3 text-1xl">Pulkit Gera explains: “To get a high CTR, I created several blog post headlines for this post and scientifically split tested them. The reason this title works so well because it identifies a common issue most bloggers face (using reliability to connect with people) and it promises to provide a quick solution.”</p>
+        </div>
+</section>
+
+
+<section class="flex flex-col-reverse md:flex-row justify-between mt-12 w-4/5 m-auto">
+    <div class="w-full md:w-3/5 p-3 flex justify-center items-center flex-col">
+          <h1 class="text-2xl text-blue-600 font-bold p-3">How to Write an Email Asking for a Referral or Recommendation</h1>
+          <p class="p-3 text-1xl">Jay Kang explains why this blog post title example worked so well: “Once we capture the user intent and understand the exact keywords, we used the proper action words like “how to”.
+            “We also noticed there are two different intent phrases most people use when searching for this type of information: “asking for referral” and “recommendation”. Writing a title can be simple as adding actionable words, but also using the phrases users use to search for their answers.”
+          </p>
+          <a class="text-blue-500 block" href="#">See More...</a>
+    </div>
+    <div class="w-full md:w-2/5 shadow-md">
+        <img src="{{ asset('images/background-4038455.png') }}" />
+    </div>
+</section>
+
 </body>
 
 <script>
