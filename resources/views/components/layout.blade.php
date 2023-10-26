@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     <link href="{{ mix('js/app.js') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flat-ui/2.3.0/css/flat-ui.min.css" rel="stylesheet"/>
+
     <style>
         @media only screen and (max-width: 600px) {
             .b-section{
@@ -150,7 +152,7 @@
     </button>
 </article>
 
-<section>
+{{-- <section>
     <div class="mr-0 ml-0 mt-6 flex justify-around mt-5">
         <div class="font-bold"><a class="text-blue-900 border rounded px-3 py-1">Food</a></div>
         <div class="font-bold"><a class="text-blue-900 border rounded px-3 py-1">Health</a></div>
@@ -159,7 +161,7 @@
         <div class="font-bold"><a class="text-blue-900 border rounded px-3 py-1">Work Life</a></div>
         <div class="font-bold"><a class="text-blue-900 border rounded px-3 py-1">Business</a></div>
     </div>
-</section>
+</section> --}}
 
 
 <section class="m-6 b-section mt-8 flex justify-around flex-wrap b-section">
@@ -217,16 +219,119 @@
 </section>
 
 
-<section class="bg-gradient-to-r from-purple-500 to-pink-500 flex">
-    <div class="w-1/4">
-        <img class="w-full h-46 ml-8" src="{{ asset('images/blog.jpg')}}" />
+<section class="bg-gradient-to-r h-5/6 from-purple-500 to-pink-500 flex flex-column mt-14">
+    <div class="w-3/4  text-center mt-12">
+        <h1 class="text-2xl md:text-4xl text-white uppercase">Upcoming blogs for Special Month</h1>
+        <div class="mt-8 mb-5 md:mb-1">
+            <button class="bg-transparent hover:bg-grey text-grey-dark font-semibold hover:text-white py-2 px-4 border border-grey hover:border-transparent rounded mr-2">
+                Authors
+            </button>
+            <button class="bg-transparent hover:bg-grey text-grey-dark font-semibold hover:text-white py-2 px-4 border border-grey hover:border-transparent rounded mr-2">
+                Posts
+            </button>
+            <button class="bg-transparent hover:bg-grey text-grey-dark font-semibold hover:text-white py-2 px-4 border border-grey hover:border-transparent rounded mr-2">
+                Feedbacks
+            </button>
+        </div>
     </div>
-    <div class="d-flex w-3/4 ml-10 flex justify-center align-center mt-9 uppercase">
-        <h1 class="text-3xl" style="color:beige;">What we provide for this website</h1>
+    <div class="flex w-1/4 ml-10 h-46 justify-end items-center pb-6 hidden md:block ">
+        <img src="{{ asset('images/ball-1906468_1280.png') }}" />
     </div>
 </section>
 
-    {{ $slot }}
+<section>
+    <h1 class="text-4xl text-center mt-14 text-blue-900">Every month, we create blog in related fields</h1>
+</section>
+
+
+<section class="flex flex-col md:flex-row justify-between mt-12 w-4/5 m-auto">
+     <div class="w-full md:w-2/5 h-auto self-center">
+           <img class="h-auto" src="{{ asset('images/3d-cartoon-background-children.jpg') }}" />
+     </div>
+     <div class="w-full md:w-3/5 p-3 flex justify-center items-center flex-col">
+           <h1 class="text-2xl text-blue-600 font-bold p-3">Struggling For A Blog Post Headline? 50+ Viral Headline Examples</h1>
+           <p class="p-3 text-1xl">Pulkit Gera explains: “To get a high CTR, I created several blog post headlines for this post and scientifically split tested them. The reason this title works so well because it identifies a common issue most bloggers face (using reliability to connect with people) and it promises to provide a quick solution.”</p>
+        </div>
+</section>
+
+
+<section class="flex flex-col-reverse md:flex-row justify-between mt-12 w-4/5 m-auto">
+    <div class="w-full md:w-3/5 p-3 flex justify-center items-center flex-col">
+          <h1 class="text-2xl text-blue-600 font-bold p-3">How to Write an Email Asking for a Referral or Recommendation</h1>
+          <p class="p-3 text-1xl">Jay Kang explains why this blog post title example worked so well: “Once we capture the user intent and understand the exact keywords, we used the proper action words like “how to”.
+            “We also noticed there are two different intent phrases most people use when searching for this type of information: “asking for referral” and “recommendation”. Writing a title can be simple as adding actionable words, but also using the phrases users use to search for their answers.”
+          </p>
+          <a class="text-blue-500 block" href="#">See More...</a>
+    </div>
+    <div class="w-full md:w-2/5 bg-none md:bg-blue-900">
+        <img src="{{ asset('images/background-4038455.png') }}" />
+    </div>
+</section>
+
+<section class="w-full h-32 bg-blue-900 flex justify-between items-center">
+    <div class="m-auto flex flex-row">
+        <img class="w-24" src="{{ asset('images/productivity.png') }}" />
+        <div class="relative h-11 w-full min-w-[200px] self-center ml-6">
+              <h6 class="text-white">Progress and time management </h6>
+        </div>
+    </div>
+</section>
+
+<section class="w-4/5 m-auto grid gap-2 grid-cols-2 my-12">
+
+    <div class="w-3/5 md:w-3/5 flex flex-row md:flex-col jusify-center items-center">
+        <h3 class="hidden md:block uppercase mt-5 mb-5">Our Sponsors</h3>
+        <img class="w-full md:w-2/5  h-32 p-3" src="{{ asset('images/sponsor-logo-5.png') }}"/>
+        <img class="w-full md:w-2/5  h-32 p-3" src="{{ asset('images/th.jfif') }}" />
+        <img class="w-full md:w-2/5  h-32 p-3" src="{{ asset('images/vp-racing-logo.webp') }}" />
+    </div>
+    <div class="hidden md:block w-5/5 grid-cols-1 md:grid md:gap-2 md:grid-cols-2">
+        <div class="p-6 shadow-md flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded">
+            Sponsored content and advertising are both ways to promote brands on your blog. Sponsored content is written in your voice, with you acting as an ambassador for the brand, and appears within the main body of your blog.
+        </div>
+        <div class="p-6 shadow-md flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded">
+            Advertising, on the other hand, is posted by the advertiser in its own voice, with its own branding, and usually within a defined ad space.There are exceptions to this. Brands may ask to create what’s known as native advertising (or advertorials) for websites.
+        </div>
+    </div>
+</section>
+
+<h6 class="block md:hidden uppercase mt-5 mb-5 text-center">Our Sponsors</h6>
+
+<section class="w-full h-auto md:h-96 bg-blue-900 flex flex-col md:flex-row justify-around items-center">
+    <div class="w-2/5 md:w-1/5">
+        <img src="{{ asset('images/job-7291427.png') }}"/>
+    </div>
+
+    <div class="w-96 bg-white text-black p-3 rounded mb-4">
+        Pollard adds: “If you’re a content marketer and you want a high CTR, I recommend creating a piece of content that’s obviously for your specific audience and then inserting as much curiosity as you can.”
+    </div>
+    <div class="w-full md:w-1/5 text-center hidden md:block">
+        <span class="text-white text-2xl font-bold block mb-5">Readie-Blog</span>
+        <ul class="list-none">
+            <li class="text-white">Numbered or List Titles</li>
+        </ul>
+
+        <ul class="list-none">
+            <li class="text-white">Ultimate Guide Titles</li>
+        </ul>
+
+        <ul class="list-none">
+            <li class="text-white">Comparison Titles</li>
+        </ul>
+
+        <ul class="list-none">
+            <li class="text-white">Personal Story Titles</li>
+        </ul>
+
+        <ul class="list-none">
+            <li class="text-white">Question-Based Titles</li>
+        </ul>
+    </div>
+</section>
+
+<section class="w-full h-24  bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded flex justify-center items-center">
+    <span class="text-center text-2xl text-white">&copy; 2023 Readie-Blog</span>
+</section>
 </body>
 
 <script>
